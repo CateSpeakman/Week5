@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <title>Single Page Products</title>
+</head>
+
+<body class="container-fluid">
+    <h1>Single Page Products</h1>
+    <main>
+        <h2>Please click on the button to view all categories</h2>
+        <section>
+            <!-- this section will contain the button to view all categories of the products-->
+            <div class="container">
+                <p><button type="button" id="viewCategoriesBtn">View All Categories</button></p>
+            </div>
+        </section>
+
+        <!-- this section will contain a hidden button that will contain dropdown list of categories to select from.  
+        This will only appear once the user clicks on the View Categories Button-->
+
+        <section id="categoryContainer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdownBtn"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select
+                                    Category</button>
+                                <div class="dropdown-menu" id="categoryList" aria-labelledby="categoryDropdownBtn">
+                                    <!-- this will be populated by Javascript-->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- this section will contain a hidden product list.  this will only appear once a user has selected a
+        product category -->
+        <div class="row">
+            <section class="col-md-4" id="productsContainer">
+                <h3 id="categoryName">&nbsp;</h3>
+                <ul id="productsList"></ul>
+            </section>
+
+            <!-- this section will contain a bootstrap card to be displayed upon a product being selected from
+        the above list-->
+            <section class="col-md-4" id="productCardContainer">
+                <div id="productCard" class="card hidden" style="width: 18rem;">
+                    <div class="card-body">
+                        <h4 class="card-title" id="cardTitle">&nbsp;</h4>
+                        <p class="card-text" id="cardText1">&nbsp;</p>
+                        <p class="card-text" id="cardText2">&nbsp;</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
